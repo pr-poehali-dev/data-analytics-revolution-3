@@ -11,7 +11,52 @@ const translations = {
   },
   ru: {
     heading: "Навыки и экспертиза",
+    principlesHeading: "Ключевые принципы работы",
+    philosophyHeading: "Моя философия бизнеса",
+    closingText: "Стремлюсь к долгосрочному развитию бизнеса, где каждый шаг ведёт к устойчивому росту и созданию ценности.",
   },
+}
+
+const principles = {
+  ru: [
+    {
+      title: "Системность",
+      description: "Применяю структурированные подходы к решению бизнес-задач",
+    },
+    {
+      title: "Эффективность",
+      description: "Оптимизирую процессы для достижения максимальной отдачи",
+    },
+    {
+      title: "Командность",
+      description: "Выстраиваю рабочие группы, где каждый участник вносит значимый вклад",
+    },
+    {
+      title: "Прозрачность",
+      description: "Обеспечиваю открытые коммуникации на всех уровнях взаимодействия",
+    },
+    {
+      title: "Адаптивность",
+      description: "Оперативно реагирую на изменения внешней среды и корректирую стратегии",
+    },
+  ],
+}
+
+const philosophy = {
+  ru: [
+    {
+      title: "Стратегия",
+      description: "Чёткое видение целей и путей их достижения",
+    },
+    {
+      title: "Команда",
+      description: "Синергия компетенций и слаженная работа профессионалов",
+    },
+    {
+      title: "Гибкость",
+      description: "Способность адаптироваться к новым условиям без потери фокуса",
+    },
+  ],
 }
 
 const skillCategories = {
@@ -70,6 +115,37 @@ export default function Skills({ language }: SkillsProps) {
           <h2 className="text-charcoal mb-6">{t.heading}</h2>
           <div className="line-accent"></div>
         </div>
+
+        {language === 'ru' && (
+          <>
+            <div className="mb-16">
+              <h3 className="text-navy text-2xl font-serif mb-8">{t.principlesHeading}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {principles.ru.map((principle, idx) => (
+                  <div key={idx} className="space-y-2">
+                    <h4 className="text-charcoal font-semibold text-lg">{principle.title}</h4>
+                    <p className="text-charcoal/70 leading-relaxed">{principle.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mb-16 bg-beige/30 p-8 rounded-sm">
+              <h3 className="text-navy text-2xl font-serif mb-8">{t.philosophyHeading}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {philosophy.ru.map((item, idx) => (
+                  <div key={idx} className="space-y-2">
+                    <h4 className="text-charcoal font-semibold text-lg">{item.title}</h4>
+                    <p className="text-charcoal/70 leading-relaxed">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-charcoal/80 leading-relaxed mt-8 text-center italic">
+                {t.closingText}
+              </p>
+            </div>
+          </>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {categories.map((cat, idx) => (
