@@ -8,21 +8,24 @@ interface NavigationProps {
 
 const translations = {
   en: {
-    biography: "Biography",
-    concerts: "Concerts",
-    gallery: "Gallery",
+    about: "About",
+    career: "Career",
+    skills: "Skills",
+    hobbies: "Hobbies",
     contact: "Contact",
   },
   de: {
-    biography: "Biographie",
-    concerts: "Konzerte",
-    gallery: "Galerie",
+    about: "Über mich",
+    career: "Karriere",
+    skills: "Fähigkeiten",
+    hobbies: "Hobbys",
     contact: "Kontakt",
   },
   ru: {
-    biography: "Биография",
-    concerts: "Концерты",
-    gallery: "Галерея",
+    about: "Обо мне",
+    career: "Карьера",
+    skills: "Навыки",
+    hobbies: "Хобби",
     contact: "Контакт",
   },
 }
@@ -66,7 +69,7 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className={`${logoColor} font-serif text-2xl font-normal tracking-wide transition-colors duration-300`}>
-            A. Voss
+            A. Akimov
           </div>
 
           {/* Desktop Menu */}
@@ -75,19 +78,25 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
               href="#biography"
               className={`text-sm ${navLinkColor} ${navLinkHoverColor} transition-colors duration-300`}
             >
-              {t.biography}
+              {t.about}
             </a>
             <a
-              href="#concerts"
+              href="#career"
               className={`text-sm ${navLinkColor} ${navLinkHoverColor} transition-colors duration-300`}
             >
-              {t.concerts}
+              {t.career}
             </a>
             <a
-              href="#gallery"
+              href="#skills"
               className={`text-sm ${navLinkColor} ${navLinkHoverColor} transition-colors duration-300`}
             >
-              {t.gallery}
+              {t.skills}
+            </a>
+            <a
+              href="#hobbies"
+              className={`text-sm ${navLinkColor} ${navLinkHoverColor} transition-colors duration-300`}
+            >
+              {t.hobbies}
             </a>
             <a
               href="#contact"
@@ -132,19 +141,25 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
               href="#biography"
               className={`block text-sm ${mobileLinkColor} hover:text-gold transition-colors duration-300 py-2`}
             >
-              {t.biography}
+              {t.about}
             </a>
             <a
-              href="#concerts"
+              href="#career"
               className={`block text-sm ${mobileLinkColor} hover:text-gold transition-colors duration-300 py-2`}
             >
-              {t.concerts}
+              {t.career}
             </a>
             <a
-              href="#gallery"
+              href="#skills"
               className={`block text-sm ${mobileLinkColor} hover:text-gold transition-colors duration-300 py-2`}
             >
-              {t.gallery}
+              {t.skills}
+            </a>
+            <a
+              href="#hobbies"
+              className={`block text-sm ${mobileLinkColor} hover:text-gold transition-colors duration-300 py-2`}
+            >
+              {t.hobbies}
             </a>
             <a
               href="#contact"

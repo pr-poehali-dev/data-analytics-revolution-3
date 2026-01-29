@@ -4,19 +4,19 @@ interface HeroProps {
 
 const translations = {
   en: {
-    title: "Alexander Voss",
-    subtitle: "Classical Pianist",
-    description: "A virtuoso performer captivating audiences at the world's most prestigious concert halls",
+    title: "Arslan Akimov",
+    subtitle: "Portfolio & Vision",
+    description: "Minimalist elegance meets modern ambition in capturing life's finest moments",
   },
   de: {
-    title: "Alexander Voss",
-    subtitle: "Klassischer Pianist",
-    description: "Ein virtuoser Performer, der Publikum in den renommiertesten Konzertsalen der Welt fasziniert",
+    title: "Arslan Akimov",
+    subtitle: "Portfolio & Vision",
+    description: "Minimalistische Eleganz trifft auf moderne Ambitionen beim Einfangen der besten Momente des Lebens",
   },
   ru: {
-    title: "Александр Фосс",
-    subtitle: "Классический пианист",
-    description: "Виртуозный исполнитель, очаровывающий публику в престижнейших концертных залах мира",
+    title: "Акимов Арслан",
+    subtitle: "Портфолио & Видение",
+    description: "Минималистичная элегантность встречается с современными амбициями в запечатлении лучших моментов жизни",
   },
 }
 
@@ -25,17 +25,15 @@ export default function Hero({ language }: HeroProps) {
 
   return (
     <section id="hero" className="relative pt-40 pb-32 md:pt-56 md:pb-48 overflow-hidden">
-      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3797.JPG-D5CA7ICwqzRlSb4xwdgFIdtxI4Epof.jpeg"
-          alt="Pianist performing"
+          src="/images/dscf3797.jpeg"
+          alt="Portfolio hero"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-charcoal/35"></div>
+        <div className="absolute inset-0 bg-charcoal/40"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <h1 className="text-white mb-6 animate-fade-in-up">{t.title}</h1>
@@ -43,13 +41,12 @@ export default function Hero({ language }: HeroProps) {
           <div className="line-accent mb-10 animate-fade-in-up animation-delay-200"></div>
           <p className="text-white font-light max-w-2xl mb-16 animate-fade-in-up animation-delay-300">{t.description}</p>
 
-          {/* Social Links */}
           <div className="flex gap-8 animate-fade-in-up animation-delay-400">
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-gold transition-colors duration-300"
+              className="text-white/80 hover:text-beige transition-colors duration-300"
             >
               <span className="sr-only">Instagram</span>
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -60,7 +57,7 @@ export default function Hero({ language }: HeroProps) {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-gold transition-colors duration-300"
+              className="text-white/80 hover:text-beige transition-colors duration-300"
             >
               <span className="sr-only">Facebook</span>
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -71,11 +68,11 @@ export default function Hero({ language }: HeroProps) {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-gold transition-colors duration-300"
+              className="text-white/80 hover:text-beige transition-colors duration-300"
             >
               <span className="sr-only">LinkedIn</span>
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 24 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
               </svg>
             </a>
           </div>
